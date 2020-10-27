@@ -1,0 +1,47 @@
+<mat-sidenav-container class="list-style" fullscreen>
+  <mat-sidenav #sidenav class="mat-elevation-z4 list-style" mode="side" opened="true">
+    <div class="mr-auto ml-auto tex-center d-flex justify-content-center"> <img width="140px"
+        src="../../assets/img/logo.png" class="text-center img-fluid mt-4" alt="">
+    </div>
+    <hr>
+    <mat-nav-list class="list-style">
+      <mat-list-item [routerLinkActiveOptions]="{ exact:
+        true }" [routerLink]="[item.url]" routerLinkActive="active" *ngFor="let item of nav ">
+        <mat-icon matListIcon>{{item.icon}}</mat-icon>
+        <h3 matLine>{{item.name}}</h3>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- navbar -->
+  <mat-toolbar color="primary">
+    <button mat-mini-fab color="warn" (click)="sidenav.toggle()">
+      <mat-icon svgIcon="menu"></mat-icon>
+    </button>
+    <mat-icon class="example-icon" svgIcon="input"></mat-icon>
+    <span>{{ "St. Kings High School" }}</span><span class="example-spacer"></span>
+    <span matTooltip="Update Settings"><button mat-icon-button routerLink="settings">
+        <mat-icon svgIcon="account_circle"></mat-icon>
+      </button></span>
+    <!-- <span matTooltip="eMail"><button mat-icon-button (click)="formShowing=!formShowing">
+        <mat-icon svgIcon="email"></mat-icon>
+      </button></span> -->
+    <!-- <span matTooltip="Security Policy" [matMenuTriggerFor]="helpSecMenu"><button mat-icon-button>
+      <mat-icon svgIcon="security"></mat-icon>
+    </button></span> -->
+    <!-- <span matTooltip="Help" [matMenuTriggerFor]="helpMenu"><button mat-icon-button>
+        <mat-icon svgIcon="help"></mat-icon>
+      </button></span> -->
+  </mat-toolbar>
+  <!-- <mat-menu #helpSecMenu="matMenu">
+    <helpdesk helpType="security"></helpdesk>
+  </mat-menu>
+  <mat-menu #helpMenu="matMenu">
+    <helpdesk helpType="{{ helpType }}"></helpdesk>
+  </mat-menu> -->
+  <!-- navbar -->
+  <div class="mt-4 container">
+    <router-outlet></router-outlet>
+  </div>
+  <footer></footer>
+</mat-sidenav-container>

@@ -1,0 +1,40 @@
+.summary .card {
+    text-align: center;
+    padding: 0.8rem 1rem;
+    min-height: 7rem;
+}
+.summary h6 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.summary p {
+    font-weight: 600;
+    font-size: 24px;
+}
+.ratio {
+    background: #fff;
+    padding: 0.3rem 0;
+}
+.ratio .col-md-6 {
+    padding: 2.7rem 0;
+}
+.ratio .col-md-6:first-child {
+    border-right: 1px solid #e4d8d8;
+}
+.ratio canvas {
+    width: auto !important;
+    height: 13rem !important;
+}
+.activity {
+    padding: 3rem 0;
+}
+.activity canvas {
+    width: auto !important;
+    height: 28rem !important;
+}
+@media screen and (max-width: 768px) {
+    .ratio .col-md-6:first-child {
+        border-bottom: 1px solid #e4d8d8;
+        border-right: none;
+   }
+}

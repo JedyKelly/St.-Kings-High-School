@@ -1,0 +1,19 @@
+mat-sidenav {
+    width: 210px;
+}
+
+.mat-drawer-inner-container {
+    width: 100%;
+    height: 100%;
+    overflow: unset !important;
+    overflow-x: hidden !important;
+
+}
+
+.list-style {
+    /* width: 100%;
+    height: 100%;
+    overflow: unset !important; */
+    overflow-x: hidden !important;
+
+}

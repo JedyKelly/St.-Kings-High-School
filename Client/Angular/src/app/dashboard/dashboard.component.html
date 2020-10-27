@@ -1,0 +1,63 @@
+<div class="summary mb-4">
+  <div class="row">
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <h6 class="text-app-Dgrey">Total <br> Employees</h6>
+        <p class="mb-0 text-app-primary">40</p>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <h6 class="text-app-Dgrey">Total <br> Vouchers</h6>
+        <p class="mb-0 text-app-primary">24</p>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <h6 class="text-app-Dgrey">Job <br> Codes</h6>
+        <p class="mb-0 text-app-primary">6</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <h6 class="text-app-Dgrey">Total <br> Salary</h6>
+        <p class="mb-0 text-app-primary">N2500000</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ratio bg-app-light mb-4">
+  <div class="row">
+    <div class="col-md-6">
+      <h6 class="f-w6 text-app-Dgrey f-16 text-center mb-3">Salary code</h6>
+      <div class="d-flex justify-content-center">
+        <canvas baseChart [chartType]="'doughnut'" [datasets]="diagnosisChartData" [labels]="diagnosisChartLabels"
+          [options]="chartOptions">
+        </canvas>
+      </div>
+      <div class="text-center">
+        <p>Allowance: 24</p>
+        <p>Deduction: 240</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h6 class="f-w6 f-16 text-app-Dgrey text-center mb-3">Salary</h6>
+      <div class="d-flex justify-content-center">
+        <canvas baseChart [chartType]="'doughnut'" [datasets]="financeChartData" [labels]="financeChartLabels"
+          [options]="chartOptions">
+        </canvas>
+      </div>
+      <div class="text-center">
+        <p>Monthly: N20,000</p>
+        <p>Yearly: N10,000</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="activity bg-app-light mb-4">
+  <div style="display: block">
+    <canvas baseChart [datasets]="diagnosis.chartData" [labels]="diagnosis.chartLabels" [options]="barOptions"
+      [legend]="diagnosis.chartLegend" [chartType]="diagnosis.chartType">
+    </canvas>
+  </div>
+</div>
